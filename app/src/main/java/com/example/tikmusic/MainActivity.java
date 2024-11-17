@@ -13,13 +13,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // 默认加载 ExploreFragment
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragment_container, new ExploreFragment())
                 .commit();
 
-        // 底部导航栏逻辑
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             Fragment selectedFragment = null;
