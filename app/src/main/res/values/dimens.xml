@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--通用-->
+    <dimen name="icon_size_48">48dp</dimen>
+    <dimen name="icon_size_32">32dp</dimen>
+    <dimen name="icon_size_24">24dp</dimen>
+    <dimen name="icon_size_16">16dp</dimen>
+
+    <dimen name="font_size_24">24sp</dimen>
+    <dimen name="font_size_18">18sp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
+    <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_12">12sp</dimen>
+
+    <dimen name="font_weight_800">800</dimen>
+    <dimen name="font_weight_500">500</dimen>
+    <dimen name="font_weight_200">200</dimen>
+
+    <dimen name="radius_100">100dp</dimen>
+    <dimen name="radius_20">20dp</dimen>
+    <dimen name="radius_10">10dp</dimen>
+    <dimen name="radius_5">5dp</dimen>
+
+    <dimen name="padding_5">5dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <!--actionbar-->
+    <dimen name="action_bar_height">48dp</dimen>
+    <dimen name="default_statusbar_height">30dp</dimen>
+    <!--navbar-->
+    <dimen name="navbar_height">69dp</dimen>
+    <dimen name="navbar_bottom_padding">15dp</dimen>
+    <dimen name="nav_icon_size">24dp</dimen>
+    <dimen name="nav_text_size">10dp</dimen>
+    <dimen name="play_icon_size">54dp</dimen>
+    <dimen name="click_icon_default_padding">3dp</dimen>
+    <!--mainfragment-->
+    <dimen name="main_fragment_bottom_item_margin">100dp</dimen>
+    <!--playingfragment-->
+    <dimen name="playing_photo_size">350dp</dimen>
+    <dimen name="like_icon_margin">3dp</dimen>
+    <!--explorefragment-->
+    <dimen name="top_song_list_height">680dp</dimen>
+    <dimen name="top_song_item_height">68dp</dimen>
+</resources>

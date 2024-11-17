@@ -1,0 +1,58 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.TikMusic" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black_800</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@null</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="NoShadowBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="TextBold18" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/text_color_white</item>
+        <item name="android:textSize">@dimen/font_size_18</item>
+        <item name="android:textFontWeight">800</item>
+    </style>
+
+    <style name="TitleBold16" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/text_color_white</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:textFontWeight">800</item>
+    </style>
+
+    <style name="TextMedium16" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/text_color_white</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="TextMedium12" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/text_color_white</item>
+        <item name="android:textSize">@dimen/font_size_12</item>
+        <item name="android:textFontWeight">500</item>
+    </style>
+
+    <style name="TextSize16" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/text_color_white</item>
+        <item name="android:textSize">@dimen/font_size_16</item>
+    </style>
+
+    <style name="TextSize12" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/text_color_white</item>
+        <item name="android:textSize">@dimen/font_size_12</item>
+    </style>
+
+    <style name="EditTextNormalStyle" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+</resources>
