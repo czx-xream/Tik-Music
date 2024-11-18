@@ -62,7 +62,9 @@ public class BackgourndAnimationRelativeLayout extends RelativeLayout {
             public void onAnimationUpdate(ValueAnimator animation) {
                 int foregroundAlpha = (int) ((float) animation.getAnimatedValue() * 255);
                 /*动态设置Drawable的透明度，让前景图逐渐显示*/
+
                 layerDrawable.getDrawable(INDEX_FOREGROUND).setAlpha(foregroundAlpha);
+
                 BackgourndAnimationRelativeLayout.this.setBackground(layerDrawable);
             }
         });
