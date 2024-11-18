@@ -19,4 +19,8 @@
     <color name="explore_bg_start_color">#294a72</color>
     <color name="explore_user_profile">#22294a72</color>
     <color name="explore_bg_end_color">#141414</color>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
 </resources>
