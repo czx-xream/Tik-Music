@@ -17,6 +17,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +44,7 @@ import org.jetbrains.annotations.NotNull;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class PlayMusicFragment extends Fragment implements DiscView.IPlayInfo , View
         .OnClickListener {
@@ -57,6 +59,7 @@ public class PlayMusicFragment extends Fragment implements DiscView.IPlayInfo , 
 
     public static final String PARAM_MUSIC_LIST = "PARAM_MUSIC_LIST";
 
+    @SuppressLint("HandlerLeak")
     private Handler mMusicHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -192,6 +195,7 @@ public class PlayMusicFragment extends Fragment implements DiscView.IPlayInfo , 
         }
     }
     private void initMusicDatas() {
+
         MusicData musicData1 = new MusicData(R.raw.music1, R.raw.ic_music1, "寻", "三亩地");
         MusicData musicData2 = new MusicData(R.raw.music2, R.raw.ic_music2, "Nightingale", "YANI");
         MusicData musicData3 = new MusicData(R.raw.music3, R.raw.ic_music3, "Cornfield Chase", "Hans Zimmer");
@@ -199,14 +203,16 @@ public class PlayMusicFragment extends Fragment implements DiscView.IPlayInfo , 
         mMusicDatas.add(musicData1);
         mMusicDatas.add(musicData2);
         mMusicDatas.add(musicData3);
-
+        Log.d("MusicService", "Loaded Music: Name = " + musicData1.getMusicName() +
+                ", Author = " + musicData1.getMusicAuthor() +
+                ", ResId = " + musicData1.getMusicRes());
         /*Start Sevice*/
         Intent intent = new Intent(getContext(), MusicService.class);
 //        Intent intent = new Intent(this, MusicService.class);
         intent.putExtra(PARAM_MUSIC_LIST, (Serializable) mMusicDatas);
         /*在这里，MainActivity 并不知道 MusicService 的具体实现细节，只是通过 Intent 传递数据，
         服务读取这些数据后完成任务。Intent 就像一个消息传递的信使，负责携带数据，但双方不需要直接关联*/
-        getActivity().startService(intent);
+        requireActivity().startService(intent);
 //        startService(intent);
 
     }
@@ -242,7 +248,7 @@ public class PlayMusicFragment extends Fragment implements DiscView.IPlayInfo , 
     private Drawable getForegroundDrawable(int musicPicRes) {
         /*得到屏幕的宽高比，以便按比例切割图片一部分*/
         final float widthHeightSize = (float) (DisplayUtil.getScreenWidth(getContext())
-                * 1.0 / DisplayUtil.getScreenHeight(getContext()) * 1.0);
+                * 1.0 / DisplayUtil.getScreenHeight(getContext()));
 //                final float widthHeightSize = (float) (DisplayUtil.getScreenWidth(MainActivity.this)
 //                * 1.0 / DisplayUtil.getScreenHeight(getContext()) * 1.0);
 

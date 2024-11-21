@@ -37,7 +37,7 @@ import java.util.List;
 public class DiscView extends RelativeLayout {
 
     private ImageView mIvNeedle;
-    private ViewPager mVpContain;
+    private VerticalViewPager mVpContain;
     private ViewPagerAdapter mViewPagerAdapter;
     private ObjectAnimator mNeedleAnimator;
 
@@ -128,7 +128,7 @@ public class DiscView extends RelativeLayout {
 
     private void initViewPager() {
         mViewPagerAdapter = new ViewPagerAdapter();
-        mVpContain = (ViewPager) findViewById(R.id.vpDiscContain);
+        mVpContain = (VerticalViewPager) findViewById(R.id.vpDiscContain);
         mVpContain.setOverScrollMode(View.OVER_SCROLL_NEVER);
         mVpContain.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             int lastPositionOffsetPixels = 0;
